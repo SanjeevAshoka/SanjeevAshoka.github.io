@@ -2,10 +2,680 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Privacy Policy for Don't Forget: how the app handles your tracking data, optional profile information, photos, and reminders."
+  >
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f8fb">
+  <title>Privacy Policy | Don't Forget</title>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f4f8fb;
+      --surface: #ffffff;
+      --text: #253342;
+      --muted: #5d6d7b;
+      --accent: #006f9f;
+      --border: #dce6ed;
+      --soft: #eef7fc;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 10;
+      padding: 10px 16px;
+      background: var(--surface);
+      transform: translateY(-180%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(100% - 40px, 860px);
+      margin-inline: auto;
+    }
+
+    .page-header {
+      padding: 64px 0 30px;
+    }
+
+    .brand {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 6vw, 52px);
+      font-weight: 750;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .updated {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .summary,
+    .contents,
+    .policy {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .summary {
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      background: var(--soft);
+    }
+
+    .summary h2,
+    .contents h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .summary p {
+      margin: 0;
+    }
+
+    .contents {
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      background: var(--surface);
+    }
+
+    .contents ol {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 30px;
+      margin: 14px 0 0;
+      padding-left: 22px;
+    }
+
+    .contents a {
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      text-decoration: underline;
+    }
+
+    .policy {
+      padding: 8px 36px;
+      background: var(--surface);
+      box-shadow: 0 10px 32px rgb(37 51 66 / 3%);
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    section h2 {
+      margin: 0 0 14px;
+      font-size: 23px;
+    }
+
+    section h3 {
+      margin: 22px 0 8px;
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 10px 0 16px;
+      padding-left: 23px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: var(--soft);
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 860px);
+      }
+
+      .page-header {
+        padding-top: 38px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .summary,
+      .contents {
+        padding: 20px;
+      }
+
+      .contents ol {
+        grid-template-columns: 1fr;
+      }
+
+      .policy {
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 24px 0;
+      }
+
+      section h2 {
+        font-size: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .skip-link,
+      .contents,
+      .back-to-top {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 0;
+      }
+
+      .summary,
+      .policy {
+        box-shadow: none;
+        border-color: #ccc;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  Privacy Policy Dcument
+  <a class="skip-link" href="#policy">Skip to privacy policy</a>
+
+  <header class="page-header container" id="top">
+    <p class="brand">Don't Forget</p>
+    <h1>Privacy Policy</h1>
+    <p class="intro">
+      A clear explanation of how Don't Forget handles your information
+      while helping you track water, prepare packing lists, and record spending.
+    </p>
+    <p class="updated">
+      Last updated: <time datetime="2026-10-25">25 October 2026</time>
+    </p>
+  </header>
+
+  <main class="container" id="policy">
+    <aside class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Your privacy, at a glance</h2>
+      <p>
+        Don't Forget works without an account. Your tracking records,
+        optional profile details, and preferences are stored locally
+        on your device. We do not operate a server to receive this
+        information, sell it, or use it for advertising.
+      </p>
+    </aside>
+
+    <nav class="contents" aria-labelledby="contents-title">
+      <h2 id="contents-title">In this policy</h2>
+      <ol>
+        <li><a href="#about">About this policy</a></li>
+        <li><a href="#data">Information the app handles</a></li>
+        <li><a href="#usage">How information is used</a></li>
+        <li><a href="#permissions">Permissions and device features</a></li>
+        <li><a href="#sharing">Sharing and third-party services</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#deletion">Your controls and data deletion</a></li>
+        <li><a href="#security">Storage and security</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#website">This privacy policy website</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article class="policy" aria-label="Privacy Policy for Don't Forget">
+      <section id="about">
+        <h2>1. About this policy</h2>
+        <p>
+          This Privacy Policy applies to the Don't Forget mobile application
+          (“the app”). It describes how information is accessed, stored,
+          used, and deleted when you use the app.
+        </p>
+        <p>
+          Don't Forget is a personal tracking tool. It does not require
+          registration, and its optional profile is not an online account.
+          For privacy questions, contact the app developer at
+          <a href="mailto:sanjeevashoka123@gmail.com">
+            sanjeevashoka123@gmail.com</a>.
+        </p>
+      </section>
+
+      <section id="data">
+        <h2>2. Information the app handles</h2>
+        <p>
+          The following information is stored locally on your device
+          when you enter it or use the corresponding features:
+        </p>
+        <ul>
+          <li>
+            <strong>Water tracking:</strong>
+            daily water intake, the amount in your current glass,
+            and dated hydration history.
+          </li>
+          <li>
+            <strong>Packing information:</strong>
+            item names, packed or unpacked status, selected dates,
+            and optional departure times.
+          </li>
+          <li>
+            <strong>Spending records:</strong>
+            expense descriptions, amounts, and dates. The app does not
+            request bank credentials, payment card numbers, or access
+            to financial accounts.
+          </li>
+          <li>
+            <strong>Optional profile information:</strong>
+            a name, email address, phone number, and profile photo,
+            if you choose to provide them. These fields are not
+            required to use the app and are not used to verify
+            your identity.
+          </li>
+          <li>
+            <strong>Preferences:</strong>
+            language, currency selection, colors, preferred control
+            side, notification preferences, and water reminder times.
+          </li>
+        </ul>
+        <p>
+          We do not receive these locally stored records on a developer-operated
+          server. Please avoid entering passwords or other unnecessary
+          sensitive information in item names or expense descriptions.
+        </p>
+      </section>
+
+      <section id="usage">
+        <h2>3. How information is used</h2>
+        <p>
+          Information is processed on your device to provide the features
+          you choose to use:
+        </p>
+        <ul>
+          <li>Display daily water intake and hydration history.</li>
+          <li>Maintain packing lists and show which items remain unpacked.</li>
+          <li>Calculate spending totals and display spending history.</li>
+          <li>Show your optional profile details and selected photo.</li>
+          <li>Apply your language, appearance, and other preferences.</li>
+          <li>
+            Schedule local reminders using your notification settings,
+            reminder times, and relevant tracking records.
+          </li>
+        </ul>
+        <p>
+          The app does not use your information for targeted advertising,
+          cross-app tracking, or automated decisions with legal or
+          similarly significant effects.
+        </p>
+      </section>
+
+      <section id="permissions">
+        <h2>4. Permissions and device features</h2>
+
+        <h3>Notifications</h3>
+        <p>
+          If you enable reminders, the app requests notification permission
+          where required by your device. Reminders are scheduled locally
+          through the operating system; they do not require an account
+          or a developer-operated push notification server.
+        </p>
+        <p>
+          Notification content may include information about your tracking
+          activity, such as a spending total or an unpacked-item reminder.
+          Depending on your device settings, this content may appear on
+          your lock screen.
+        </p>
+        <p>
+          You can turn reminders off in the app or manage notification
+          access and lock-screen visibility in your device settings.
+          Delivery may be affected by operating-system restrictions
+          and battery settings.
+        </p>
+
+        <h3>Optional profile photo</h3>
+        <p>
+          If you choose to add a profile photo, the app opens your device's
+          image selection interface. Depending on your operating system,
+          this may use a system photo picker or request access to photos.
+          The app uses the image you select, creates a resized local copy
+          for your profile, and does not upload it to us.
+        </p>
+        <p>
+          Removing the profile photo from the app does not delete the
+          original image from your photo library.
+        </p>
+
+        <h3>Local storage</h3>
+        <p>
+          The app uses its local application storage to save tracking
+          records and preferences between sessions. It does not need
+          broad access to all files on your device for its core tracking
+          features.
+        </p>
+      </section>
+
+      <section id="sharing">
+        <h2>5. Sharing and third-party services</h2>
+        <p>
+          We do not sell, rent, or share your locally stored tracking
+          records, profile details, or selected profile photo with
+          advertisers, data brokers, or other organizations.
+        </p>
+        <p>
+          The current app does not include advertising or
+          developer-configured analytics tracking. It uses software
+          libraries and operating-system services to provide its
+          interface, local storage, photo selection, and notifications.
+        </p>
+        <p>
+          Google Play, your device operating system, and any services
+          you use independently may process information under their
+          own privacy policies. For example, app stores may process
+          installation information or collect diagnostic reports
+          according to your settings.
+        </p>
+        <p>
+          If you contact us by email, your email provider and ours
+          process that correspondence. We receive your email address
+          and any information you choose to include, and use it to
+          respond to your request. Please do not send sensitive
+          tracking records unless necessary.
+        </p>
+      </section>
+
+      <section id="retention">
+        <h2>6. Data retention</h2>
+        <p>
+          Tracking records are maintained within rolling calendar-day
+          windows based on your device's local date:
+        </p>
+        <ul>
+          <li>
+            <strong>Water:</strong>
+            a 30-day window including today.
+          </li>
+          <li>
+            <strong>Packing:</strong>
+            a 30-day history window including today, plus dates
+            up to 30 days ahead.
+          </li>
+          <li>
+            <strong>Spending:</strong>
+            a 45-day window including today.
+          </li>
+        </ul>
+        <p>
+          Records outside the supported windows are removed when the
+          app performs its cleanup, such as when it starts or returns
+          to the foreground. This does not mean deletion runs at an
+          exact time while the app is closed.
+        </p>
+        <p>
+          Your profile and preferences remain locally stored until
+          you change them, clear the app's storage, or uninstall the app.
+          Pending reminders are managed separately by your device's
+          notification system.
+        </p>
+        <p>
+          If you email us, correspondence may be retained for as long
+          as reasonably necessary to address your request and meet
+          applicable legal obligations.
+        </p>
+      </section>
+
+      <section id="deletion">
+        <h2>7. Your controls and data deletion</h2>
+        <p>You can manage information in the following ways:</p>
+        <ul>
+          <li>
+            <strong>Tracking records:</strong>
+            use the available delete controls or the data management
+            section in Settings to clear records for individual
+            features or all tracking data.
+          </li>
+          <li>
+            <strong>Profile details:</strong>
+            edit or empty the optional profile fields and use the
+            photo removal control to remove the app's profile image.
+          </li>
+          <li>
+            <strong>Reminders:</strong>
+            change reminder times, disable reminders, or revoke
+            notification permission in your device settings.
+          </li>
+          <li>
+            <strong>All local app data:</strong>
+            use your device's clear-storage option, where available,
+            or uninstall the app to remove its local application data.
+          </li>
+        </ul>
+        <p>
+          Clearing tracking data inside the app preserves your profile
+          and preferences. Because we do not hold a server-side copy
+          of your tracking records, we cannot retrieve, restore,
+          or remotely delete those records for you.
+        </p>
+        <p>
+          There is no online app account to delete. If you want to
+          request deletion of correspondence you sent us, please
+          contact the email address below. We will consider the
+          request subject to applicable legal requirements.
+        </p>
+        <div class="note">
+          Deletion from the app does not remove original photos from
+          your photo library, emails you sent, or copies you created
+          outside the app.
+        </div>
+      </section>
+
+      <section id="security">
+        <h2>8. Storage and security</h2>
+        <p>
+          App records are stored in local application storage and
+          rely on your operating system's app isolation and device
+          security protections. The app's local storage is not
+          designed as a separately encrypted vault.
+        </p>
+        <p>
+          We recommend protecting your device with a screen lock,
+          keeping its software updated, and limiting access to
+          people you trust. No storage method or device can be
+          guaranteed completely secure.
+        </p>
+        <p>
+          Don't Forget does not provide cloud synchronization or
+          recovery of tracking records. Clearing storage, uninstalling
+          the app, or losing your device may permanently remove
+          your records.
+        </p>
+      </section>
+
+      <section id="children">
+        <h2>9. Children's privacy</h2>
+        <p>
+          Don't Forget does not knowingly collect children's personal
+          information on a developer-operated server. The app does not
+          require an online account, and optional profile information
+          stays on the device.
+        </p>
+        <p>
+          If you believe a child has sent us personal information
+          through email or another direct communication, please
+          contact us so we can review and address the situation.
+        </p>
+      </section>
+
+      <section id="website">
+        <h2>10. This privacy policy website</h2>
+        <p>
+          This policy page is hosted using GitHub Pages. The page
+          does not add analytics, advertising scripts, cookies,
+          forms, or external fonts.
+        </p>
+        <p>
+          The hosting provider may process technical information,
+          such as your IP address and request details, when serving
+          the page under its own privacy practices. This website
+          hosting is separate from the app's locally stored
+          tracking records.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this policy to reflect changes to the app,
+          applicable requirements, or our privacy practices. The
+          latest version will be published on this page with an
+          updated date.
+        </p>
+        <p>
+          If future versions introduce advertising, analytics,
+          cloud services, or other materially different data
+          practices, we will update the policy and provide any
+          notices or consent choices required before those
+          practices take effect.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>12. Contact</h2>
+        <p>
+          For questions about this policy, privacy concerns, or
+          requests relating to information you have sent us,
+          contact the developer of Don't Forget:
+        </p>
+        <a
+          class="contact-link"
+          href="mailto:sanjeevashoka123@gmail.com"
+        >sanjeevashoka123@gmail.com</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="container">
+    <p>Don't Forget · Privacy Policy</p>
+    <a class="back-to-top" href="#top">Back to top</a>
+  </footer>
 </body>
 </html>
